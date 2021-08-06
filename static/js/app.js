@@ -44,7 +44,7 @@ function Charts(sample) {
         var bubbleLayout = {
             title: "Bacteria Cultures",
             hovermode: "closest",
-            xaxis: { title: "OTU ID" },
+            xaxis: { title: "Sample ID" },
         };
     Plotly.newPlot("bubble", bubbleData, bubbleLayout);
 
@@ -58,8 +58,9 @@ function Charts(sample) {
             text: otu_labels
             }];
         var layout = {
-            title: "Top 10 Bacteria",
+            title: "Top 10 Largest Samples",
             yaxis:{autorange:'reversed'},
+            xaxis: { title: "# of Bacteria" },
             
         };
     Plotly.newPlot('bar', graph,layout);
